@@ -1,284 +1,375 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sihirliellernails Üçyol | İzmir Konak Protez Tırnak & Nail Art Stüdyosu</title>
-    <meta name="description" content="Konak Üçyol'da kişiye özel nail art, protez tırnak, kalıcı oje ve medikal manikür. 4.8 puanlı premium tırnak stüdyosu. Hemen WhatsApp'tan randevu alın.">
-    
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Fonts & Icons -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        cream: '#FAFAFA',
-                        lilac: '#E8D5C4',
-                        blush: '#F3E8EE',
-                        gold: '#D4AF37',
-                        rosegold: '#E0A96D',
-                        plum: '#2D232E',
-                        wa: '#1FA855',
-                        wadark: '#128C4A'
-                    },
-                    fontFamily: {
-                        serif: ['"Playfair Display"', 'serif'],
-                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-                    },
-                    boxShadow: {
-                        'soft': '0 20px 60px -15px rgba(45,35,46,0.15)',
-                        'gold': '0 15px 40px -10px rgba(212,175,55,0.45)',
-                        'card': '0 10px 40px -10px rgba(224,169,109,0.25)'
-                    }
-                }
-            }
-        }
-    </script>
-
-    <style>
-        html { scroll-behavior: smooth; }
-        body { font-family: 'Plus Jakarta Sans', sans-serif; background: #FAFAFA; color: #2D232E; overflow-x: hidden; }
-        .gold-text {
-            background: linear-gradient(120deg, #9a7b1e 0%, #D4AF37 25%, #F5E6B8 50%, #E0A96D 75%, #D4AF37 100%);
-            -webkit-background-clip: text; background-clip: text; color: transparent;
-        }
-        .gold-bg { background: linear-gradient(135deg, #D4AF37 0%, #E0A96D 100%); }
-        .insta-bg { background: linear-gradient(45deg, #f9ce34 0%, #ee2a7b 50%, #6228d7 100%); }
-        .glass { background: rgba(255,255,255,0.8); backdrop-filter: blur(12px); }
-        .arch { border-radius: 999px 999px 32px 32px; }
-        
-        #preloader {
-            position: fixed; inset: 0; z-index: 100; background: #2D232E;
-            display: flex; align-items: center; justify-content: center; flex-direction: column;
-            transition: opacity 0.5s, visibility 0.5s;
-        }
-        #preloader.hide { opacity: 0; visibility: hidden; }
-        .loader-ring {
-            width: 60px; height: 60px; border-radius: 50%;
-            border: 3px solid rgba(212,175,55,0.2); border-top-color: #D4AF37;
-            animation: spin 1s linear infinite;
-        }
-        @keyframes spin { to { transform: rotate(360deg); } }
-        #progressBar { position: fixed; top: 0; left: 0; height: 3px; background: #D4AF37; z-index: 99; width: 0%; }
-        .img-zoom { overflow: hidden; }
-        .img-zoom img { transition: transform 0.5s ease; }
-        .img-zoom:hover img { transform: scale(1.05); }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sihirliellernails Üçyol | İzmir Konak Protez Tırnak & Nail Art Stüdyosu</title>
+<meta name="description" content="Konak Üçyol'da kişiye özel nail art, protez tırnak, kalıcı oje ve medikal manikür. 4.8 puanlı premium tırnak stüdyosu. Hemen WhatsApp'tan randevu alın.">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        cream: '#FAFAFA',
+        lilac: '#E8D5C4',
+        blush: '#F3E8EE',
+        gold: '#D4AF37',
+        rosegold: '#E0A96D',
+        plum: '#2D232E',
+        plumlight: '#4A3E4B',
+        wa: '#1FA855',
+        wadark: '#128C4A'
+      },
+      fontFamily: {
+        serif: ['"Playfair Display"', 'serif'],
+        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+      },
+      boxShadow: {
+        'soft': '0 20px 60px -15px rgba(45,35,46,0.15)',
+        'gold': '0 15px 40px -10px rgba(212,175,55,0.45)',
+        'card': '0 10px 40px -10px rgba(224,169,109,0.25)',
+        'glow': '0 0 40px rgba(212,175,55,0.35)'
+      }
+    }
+  }
+}
+</script>
+<style>
+*{-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{font-family:'Plus Jakarta Sans',sans-serif;background:#FAFAFA;color:#2D232E;overflow-x:hidden}
+::selection{background:#D4AF37;color:#fff}
+::-webkit-scrollbar{width:10px}
+::-webkit-scrollbar-track{background:#F3E8EE}
+::-webkit-scrollbar-thumb{background:linear-gradient(#D4AF37,#E0A96D);border-radius:20px}
+.font-serif{font-family:'Playfair Display',serif}
+.gold-text{background:linear-gradient(120deg,#9a7b1e 0%,#D4AF37 25%,#F5E6B8 50%,#E0A96D 75%,#D4AF37 100%);background-size:200% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 4s linear infinite}
+@keyframes shine{to{background-position:200% center}}
+.gold-bg{background:linear-gradient(135deg,#D4AF37 0%,#E0A96D 50%,#c99a2e 100%)}
+.insta-bg{background:linear-gradient(45deg,#f9ce34 0%,#ee2a7b 50%,#6228d7 100%)}
+.glass{background:rgba(255,255,255,0.75);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px)}
+.arch{border-radius:999px 999px 32px 32px}
+.blob{position:absolute;filter:blur(70px);opacity:.55;pointer-events:none;animation:blobFloat 9s ease-in-out infinite alternate}
+@keyframes blobFloat{0%{transform:translate(0,0) scale(1)}100%{transform:translate(30px,-30px) scale(1.15)}}
+.float-slow{animation:floatY 5s ease-in-out infinite}
+.float-slower{animation:floatY 7s ease-in-out infinite}
+.float-delay{animation:floatY 6s ease-in-out infinite;animation-delay:1.2s}
+@keyframes floatY{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+.spin-slow{animation:spin 18s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.marquee-track{display:flex;width:max-content;animation:marquee 26s linear infinite}
+@keyframes marquee{to{transform:translateX(-50%)}}
+.reveal{opacity:0;transform:translateY(36px);transition:all .9s cubic-bezier(.16,1,.3,1)}
+.reveal.active{opacity:1;transform:translateY(0)}
+.reveal-left{opacity:0;transform:translateX(-50px);transition:all .9s cubic-bezier(.16,1,.3,1)}
+.reveal-left.active{opacity:1;transform:translateX(0)}
+.reveal-right{opacity:0;transform:translateX(50px);transition:all .9s cubic-bezier(.16,1,.3,1)}
+.reveal-right.active{opacity:1;transform:translateX(0)}
+.scale-in{opacity:0;transform:scale(.9);transition:all .8s cubic-bezier(.16,1,.3,1)}
+.scale-in.active{opacity:1;transform:scale(1)}
+.btn-shine{position:relative;overflow:hidden}
+.btn-shine::after{content:'';position:absolute;top:0;left:-80%;width:50%;height:100%;background:linear-gradient(120deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-20deg);transition:.6s}
+.btn-shine:hover::after{left:130%}
+.card-hover{transition:all .5s cubic-bezier(.16,1,.3,1)}
+.card-hover:hover{transform:translateY(-10px);box-shadow:0 30px 60px -15px rgba(45,35,46,.22)}
+.img-zoom{overflow:hidden}
+.img-zoom img{transition:transform .8s cubic-bezier(.16,1,.3,1)}
+.img-zoom:hover img{transform:scale(1.08)}
+.sparkle-dot{position:absolute;width:6px;height:6px;background:#D4AF37;border-radius:50%;pointer-events:none;animation:sparklePop 1s ease-out forwards}
+@keyframes sparklePop{0%{transform:scale(0);opacity:1}100%{transform:scale(1.5) translateY(-30px);opacity:0}}
+.twinkle{animation:twinkle 2.2s ease-in-out infinite}
+@keyframes twinkle{0%,100%{opacity:.3;transform:scale(.8) rotate(0deg)}50%{opacity:1;transform:scale(1.2) rotate(20deg)}}
+#preloader{position:fixed;inset:0;z-index:100;background:#2D232E;display:flex;align-items:center;justify-content:center;flex-direction:column;transition:opacity .7s,visibility .7s}
+#preloader.hide{opacity:0;visibility:hidden}
+.loader-ring{width:90px;height:90px;border-radius:50%;border:3px solid rgba(212,175,55,.2);border-top-color:#D4AF37;animation:spin 1s linear infinite}
+.shimmer-line{height:1px;background:linear-gradient(90deg,transparent,#D4AF37,transparent)}
+.nav-link{position:relative}
+.nav-link::after{content:'';position:absolute;left:0;bottom:-4px;width:0;height:2px;background:linear-gradient(90deg,#D4AF37,#E0A96D);border-radius:2px;transition:width .35s}
+.nav-link:hover::after{width:100%}
+.faq-content{max-height:0;overflow:hidden;transition:max-height .5s cubic-bezier(.16,1,.3,1)}
+.faq-item.open .faq-content{max-height:220px}
+.faq-item.open .faq-icon{transform:rotate(45deg);background:#2D232E;color:#fff}
+.faq-icon{transition:all .3s}
+.accordion-bar{transition:all .3s}
+.slot-btn{transition:all .25s}
+.slot-btn.selected{background:#2D232E!important;color:#fff!important;border-color:#2D232E!important;box-shadow:0 8px 20px -5px rgba(45,35,46,.4)}
+.service-pick.selected{border-color:#D4AF37!important;background:linear-gradient(135deg,#FFF9E9,#FDF3E0)!important;box-shadow:0 10px 30px -10px rgba(212,175,55,.5)}
+.service-pick.selected .pick-check{opacity:1!important;transform:scale(1)!important}
+.quiz-opt.selected{border-color:#2D232E!important;background:#2D232E!important;color:#fff!important}
+.quiz-opt.selected span{color:#fff!important}
+input,textarea{outline:none}
+input:focus,textarea:focus{border-color:#D4AF37!important;box-shadow:0 0 0 3px rgba(212,175,55,.15)}
+#progressBar{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,#D4AF37,#E0A96D,#ee2a7b);z-index:99;width:0%;transition:width .1s}
+.pattern-dots{background-image:radial-gradient(#E8D5C4 1.5px,transparent 1.5px);background-size:22px 22px}
+.review-slider{scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.review-slider::-webkit-scrollbar{display:none}
+.review-slider>*{scroll-snap-align:center}
+.pulse-dot{animation:pulseDot 1.8s infinite}
+@keyframes pulseDot{0%{box-shadow:0 0 0 0 rgba(31,168,85,.5)}70%{box-shadow:0 0 0 10px rgba(31,168,85,0)}100%{box-shadow:0 0 0 0 rgba(31,168,85,0)}}
+.cursor-spark{position:fixed;width:8px;height:8px;background:radial-gradient(circle,#F5E6B8,#D4AF37);border-radius:50%;pointer-events:none;z-index:9999;animation:cursorFade .8s ease-out forwards}
+@keyframes cursorFade{to{transform:translateY(-20px) scale(0);opacity:0}}
+.modal-bg{background:rgba(45,35,46,.7);backdrop-filter:blur(8px)}
+.tilt{transform-style:preserve-3d;transition:transform .3s}
+.no-scrollbar::-webkit-scrollbar{display:none}
+.no-scrollbar{scrollbar-width:none}
+@media(max-width:768px){.cursor-spark{display:none}}
+.safe-bottom{padding-bottom:env(safe-area-inset-bottom)}
+</style>
 </head>
 <body class="antialiased">
 
-    <div id="progressBar"></div>
+<!-- PROGRESS -->
+<div id="progressBar"></div>
 
-    <!-- Preloader -->
-    <div id="preloader">
-        <div class="loader-ring mb-4"></div>
-        <div class="font-serif text-2xl text-white italic">Sihirli Eller</div>
-        <div class="text-[10px] tracking-[0.3em] text-gold mt-1">ÜÇYOL • İZMİR</div>
-    </div>
+<!-- PRELOADER -->
+<div id="preloader">
+  <div class="loader-ring mb-6"></div>
+  <div class="font-serif text-3xl text-white italic">Sihirli Eller</div>
+  <div class="text-[11px] tracking-[0.4em] text-gold mt-2 font-semibold">ÜÇYOL • İZMİR</div>
+  <div class="mt-4 flex gap-1">
+    <span class="w-2 h-2 rounded-full bg-gold twinkle"></span>
+    <span class="w-2 h-2 rounded-full bg-rosegold twinkle" style="animation-delay:.3s"></span>
+    <span class="w-2 h-2 rounded-full bg-white twinkle" style="animation-delay:.6s"></span>
+  </div>
+</div>
 
-    <!-- Üst Duyuru Barı -->
-    <div class="bg-plum text-white text-center py-2 px-4 text-xs font-medium relative z-50">
-        <span>✨ İlk randevunuza özel <strong class="text-gold">ücretsiz nail art çizimi</strong>!</span>
-    </div>
+<!-- TOP ANNOUNCEMENT -->
+<div class="bg-plum text-white text-center py-2.5 px-4 relative overflow-hidden z-[60]">
+  <div class="absolute inset-0 opacity-20" style="background:linear-gradient(90deg,transparent,#D4AF37,transparent)"></div>
+  <p class="text-[12px] md:text-[13px] font-medium tracking-wide relative flex items-center justify-center gap-2 flex-wrap">
+    <span class="inline-flex items-center gap-1.5 bg-white/10 border border-white/15 rounded-full px-3 py-0.5">
+      <span id="openDot" class="w-2 h-2 rounded-full bg-green-400 pulse-dot"></span>
+      <span id="openText" class="text-[11px] font-semibold">Şu An Açığız</span>
+    </span>
+    <span class="hidden sm:inline text-white/30">|</span>
+    <span>✨ İlk randevunuza özel <strong class="text-gold">ücretsiz nail art çizimi</strong> ✨</span>
+    <a href="#" data-book class="underline underline-offset-2 decoration-gold text-gold font-bold hover:text-white transition">Hemen Al</a>
+  </p>
+</div>
 
-    <!-- Navbar -->
-    <header class="sticky top-0 z-40 bg-cream/90 backdrop-blur-md border-b border-plum/5">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-16">
-                <a href="#" class="flex items-center gap-2">
-                    <span class="font-serif font-bold text-xl text-plum">Sihirliellernails <span class="gold-text">Üçyol</span></span>
-                </a>
-                <nav class="hidden md:flex gap-6 text-sm font-semibold text-plum/80">
-                    <a href="#hakkimizda" class="hover:text-gold transition">Hakkımızda</a>
-                    <a href="#hizmetler" class="hover:text-gold transition">Hizmetler</a>
-                    <a href="#galeri" class="hover:text-gold transition">Galeri</a>
-                    <a href="#yorumlar" class="hover:text-gold transition">Yorumlar</a>
-                    <a href="#iletisim" class="hover:text-gold transition">İletişim</a>
-                </nav>
-                <div class="hidden md:flex items-center gap-3">
-                    <a href="https://www.instagram.com/sihirliellernailart/" target="_blank" class="insta-bg text-white px-4 py-2 rounded-full text-xs font-bold flex items-center gap-1.5 shadow">
-                        <i class="fab fa-instagram"></i> Instagram
-                    </a>
-                    <a href="https://wa.me/905362484214?text=Merhaba,%20randevu%20hakkında%20bilgi%20almak%20istiyorum." target="_blank" class="bg-wa text-white px-4 py-2 rounded-full text-xs font-bold flex items-center gap-1.5 shadow hover:bg-wadark transition">
-                        <i class="fab fa-whatsapp"></i> Randevu Al
-                    </a>
-                </div>
-                <button id="menuBtn" class="md:hidden text-plum text-xl">
-                    <i class="fas fa-bars"></i>
-                </button>
-            </div>
-        </div>
-        <!-- Mobil Menü -->
-        <div id="mobileMenu" class="hidden md:hidden bg-white border-b border-plum/10 px-6 py-4 space-y-3 text-sm font-semibold">
-            <a href="#hakkimizda" class="block">Hakkımızda</a>
-            <a href="#hizmetler" class="block">Hizmetler</a>
-            <a href="#galeri" class="block">Galeri</a>
-            <a href="#yorumlar" class="block">Yorumlar</a>
-            <a href="#iletisim" class="block">İletişim</a>
-            <div class="pt-2 flex flex-col gap-2">
-                <a href="https://wa.me/905362484214" target="_blank" class="bg-wa text-white text-center py-2 rounded-xl font-bold"><i class="fab fa-whatsapp"></i> WhatsApp Randevu</a>
-                <a href="https://www.instagram.com/sihirliellernailart/" target="_blank" class="insta-bg text-white text-center py-2 rounded-xl font-bold"><i class="fab fa-instagram"></i> Instagram</a>
-            </div>
-        </div>
-    </header>
+<!-- HEADER -->
+<header id="navbar" class="sticky top-0 z-50 transition-all duration-500 bg-cream/80 backdrop-blur-xl border-b border-plum/5">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-[72px]">
+      <!-- Logo -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="relative w-11 h-11 flex items-center justify-center">
+          <div class="absolute inset-0 rounded-2xl rotate-6 gold-bg opacity-90 group-hover:rotate-12 transition duration-500 shadow-gold"></div>
+          <div class="absolute inset-0 rounded-2xl bg-plum -rotate-3 group-hover:-rotate-6 transition duration-500"></div>
+          <span class="relative font-serif italic font-bold text-white text-xl">S</span>
+          <span class="absolute -top-1 -right-1 text-gold text-xs twinkle">✦</span>
+        </div>
+        <div class="leading-tight">
+          <div class="font-serif font-bold text-[17px] md:text-[19px] text-plum">Sihirliellernails <span class="italic gold-text">Üçyol</span></div>
+          <div class="text-[10px] tracking-[0.28em] text-plum/50 font-bold">NAIL ART STUDIO • İZMİR</div>
+        </div>
+      </a>
+      <!-- Desktop Menu -->
+      <nav class="hidden lg:flex items-center gap-7 text-[14px] font-semibold text-plum/80">
+        <a href="#hakkimizda" class="nav-link hover:text-plum">Hakkımızda</a>
+        <a href="#hizmetler" class="nav-link hover:text-plum">Hizmetler</a>
+        <a href="#instagram" class="nav-link hover:text-plum">Instagram</a>
+        <a href="#yorumlar" class="nav-link hover:text-plum">Yorumlar</a>
+        <a href="#iletisim" class="nav-link hover:text-plum">İletişim</a>
+      </nav>
+      <div class="hidden lg:flex items-center gap-3">
+        <a href="https://www.instagram.com/sihirliellernailart/" target="_blank" class="insta-bg text-white px-4 py-2.5 rounded-full text-[13px] font-bold flex items-center gap-2 hover:scale-105 hover:shadow-lg transition btn-shine">
+          <i class="fab fa-instagram text-[16px]"></i> Instagram
+        </a>
+        <a href="https://wa.me/905362484214?text=Merhaba,%20web%20sitenizden%20ula%C5%9F%C4%B1yorum.%20Nail%20art%20tasar%C4%B1mlar%C4%B1%20ve%20randevu%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum" target="_blank" class="bg-plum text-white px-5 py-2.5 rounded-full text-[13px] font-bold flex items-center gap-2 hover:bg-wa hover:scale-105 transition btn-shine shadow-soft">
+          <i class="fab fa-whatsapp text-[17px] text-green-300"></i> WhatsApp Randevu
+        </a>
+      </div>
+      <!-- Mobile hamburger -->
+      <button id="menuBtn" class="lg:hidden w-11 h-11 rounded-full bg-plum text-white flex items-center justify-center shadow-soft">
+        <i id="menuIcon" class="fas fa-bars"></i>
+      </button>
+    </div>
+  </div>
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="lg:hidden hidden bg-white/95 backdrop-blur-xl border-t border-plum/10 px-6 py-6 space-y-1 absolute w-full shadow-soft rounded-b-3xl">
+    <a href="#hakkimizda" class="mob-link flex items-center justify-between py-3 border-b border-plum/5 font-semibold">Hakkımızda <i class="fas fa-chevron-right text-gold text-sm"></i></a>
+    <a href="#hizmetler" class="mob-link flex items-center justify-between py-3 border-b border-plum/5 font-semibold">Hizmetler <i class="fas fa-chevron-right text-gold text-sm"></i></a>
+    <a href="#instagram" class="mob-link flex items-center justify-between py-3 border-b border-plum/5 font-semibold">Instagram <i class="fas fa-chevron-right text-gold text-sm"></i></a>
+    <a href="#yorumlar" class="mob-link flex items-center justify-between py-3 border-b border-plum/5 font-semibold">Müşteri Yorumları <i class="fas fa-chevron-right text-gold text-sm"></i></a>
+    <a href="#iletisim" class="mob-link flex items-center justify-between py-3 font-semibold">İletişim <i class="fas fa-chevron-right text-gold text-sm"></i></a>
+    <div class="grid grid-cols-2 gap-3 pt-4">
+      <a href="https://wa.me/905362484214?text=Merhaba,%20web%20sitenizden%20ula%C5%9F%C4%B1yorum.%20Nail%20art%20tasar%C4%B1mlar%C4%B1%20ve%20randevu%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum" target="_blank" class="bg-wa text-white rounded-2xl py-3.5 font-bold text-sm flex items-center justify-center gap-2"><i class="fab fa-whatsapp text-lg"></i> Randevu Al</a>
+      <a href="https://www.instagram.com/sihirliellernailart/" target="_blank" class="insta-bg text-white rounded-2xl py-3.5 font-bold text-sm flex items-center justify-center gap-2"><i class="fab fa-instagram text-lg"></i> Instagram</a>
+    </div>
+  </div>
+</header>
 
-    <main>
-        <!-- Hero Section -->
-        <section class="py-12 md:py-20 relative">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid md:grid-cols-2 gap-12 items-center">
-                    <div class="text-center md:text-left">
-                        <div class="inline-flex items-center gap-2 bg-white px-3 py-1 rounded-full border border-gold/30 text-xs font-semibold mb-4 shadow-sm">
-                            <i class="fas fa-star text-gold"></i> 4.8 Google Puanı • Üçyol İzmir
-                        </div>
-                        <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
-                            Tırnaklarınıza <span class="gold-text">Sihirli</span> ve Sanatsal Dokunuş
-                        </h1>
-                        <p class="mt-4 text-plum/70 text-base leading-relaxed">
-                            Konak Üçyol'da kişiye özel nail art tasarımları, protez tırnak, kalıcı oje ve medikal manikür ile tarzınızı yansıtın.
-                        </p>
-                        <div class="mt-8 flex flex-col sm:flex-row gap-3 justify-center md:justify-start">
-                            <a href="https://wa.me/905362484214?text=Merhaba,%20randevu%20almak%20istiyorum." target="_blank" class="bg-wa hover:bg-wadark text-white px-6 py-3.5 rounded-2xl font-bold text-sm flex items-center justify-center gap-2 shadow-soft transition">
-                                <i class="fab fa-whatsapp text-lg"></i> WhatsApp'tan Randevu Al
-                            </a>
-                            <a href="https://www.google.com/maps/search/?api=1&query=Kılıç+Reis+356.+Sk.+5A+Konak+İzmir" target="_blank" class="bg-white border border-plum/10 text-plum px-6 py-3.5 rounded-2xl font-bold text-sm flex items-center justify-center gap-2 hover:border-gold transition shadow-sm">
-                                <i class="fas fa-location-arrow text-gold"></i> Yol Tarifi
-                            </a>
-                        </div>
-                    </div>
-                    <div class="flex justify-center">
-                        <div class="relative w-full max-w-[380px]">
-                            <div class="arch overflow-hidden border-4 border-white shadow-soft img-zoom">
-                                <img src="https://raw.githubusercontent.com/thatsaren-creator/sihirliellernails/main/WhatsApp%20Image%202026-09-11%20at%2017.09.39%20(1).jpeg" alt="Nail Art" class="w-full h-[450px] object-cover">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+<main class="pb-24 md:pb-0">
 
-        <!-- Hakkımızda -->
-        <section id="hakkimizda" class="py-16 bg-white">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid md:grid-cols-2 gap-12 items-center">
-                    <div class="grid grid-cols-2 gap-4">
-                        <img src="https://raw.githubusercontent.com/thatsaren-creator/sihirliellernails/main/c0351906-f0f9-46a5-a01f-1a82dd1eb074.jpg" class="rounded-2xl h-64 w-full object-cover shadow" alt="Stüdyo">
-                        <img src="https://raw.githubusercontent.com/thatsaren-creator/sihirliellernails/main/c8cc3c64-3c47-445d-a245-3c52aa4c1bca.jpg" class="rounded-2xl h-64 w-full object-cover shadow mt-6" alt="Tasarım Detay">
-                    </div>
-                    <div>
-                        <span class="text-xs font-bold text-gold tracking-widest uppercase">Hakkımızda</span>
-                        <h2 class="font-serif text-3xl md:text-4xl font-bold mt-2">Titizlik, Hijyen ve Sanat Bir Arada</h2>
-                        <p class="mt-4 text-plum/70 text-sm leading-relaxed">
-                            Sihirliellernails Üçyol stüdyomuzda hijyenden taviz vermeden kişiye özel nail art ve tırnak bakım hizmeti veriyoruz. Tek kullanımlık steril malzemeler ve kaliteli ürünlerimizle uzun süre kalıcı, şık sonuçlar sunuyoruz.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
+<!-- ============ HERO ============ -->
+<section class="relative overflow-hidden pt-8 md:pt-14 pb-10 md:pb-20">
+  <div class="blob w-[420px] h-[420px] bg-blush rounded-full -top-20 -left-20"></div>
+  <div class="blob w-[380px] h-[380px] rounded-full top-10 right-0" style="background:#F5E6C8;animation-delay:2s"></div>
+  <div class="blob w-[260px] h-[260px] rounded-full bottom-0 left-1/3" style="background:#E9D6FF;opacity:.4;animation-delay:4s"></div>
+  <div class="absolute inset-0 pattern-dots opacity-40 pointer-events-none"></div>
+  <canvas id="sparkleCanvas" class="absolute inset-0 w-full h-full pointer-events-none"></canvas>
 
-        <!-- Hizmetler -->
-        <section id="hizmetler" class="py-16 bg-cream">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center max-w-xl mx-auto mb-12">
-                    <h2 class="font-serif text-3xl font-bold">Hizmetlerimiz</h2>
-                    <p class="text-plum/60 text-sm mt-2">Tırnaklarınıza uygun bakımı seçip anında randevunuzu oluşturabilirsiniz.</p>
-                </div>
-                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <div class="bg-white p-6 rounded-2xl shadow-card border border-plum/5 flex flex-col justify-between">
-                        <div>
-                            <div class="w-12 h-12 rounded-xl gold-bg text-white flex items-center justify-center text-xl mb-4"><i class="fas fa-paint-brush"></i></div>
-                            <h3 class="font-serif font-bold text-xl">Özel Nail Art</h3>
-                            <p class="text-plum/65 text-sm mt-2">Pinterest modelleri, el çizimi tasarımlar, 3D taşlar ve chrome detaylar.</p>
-                        </div>
-                        <a href="https://wa.me/905362484214" target="_blank" class="mt-6 w-full py-2.5 bg-blush text-plum font-bold rounded-xl text-center text-sm hover:bg-plum hover:text-white transition">Randevu Al</a>
-                    </div>
-                    <div class="bg-white p-6 rounded-2xl shadow-card border border-plum/5 flex flex-col justify-between">
-                        <div>
-                            <div class="w-12 h-12 rounded-xl bg-plum text-gold flex items-center justify-center text-xl mb-4"><i class="fas fa-gem"></i></div>
-                            <h3 class="font-serif font-bold text-xl">Protez Tırnak</h3>
-                            <p class="text-plum/65 text-sm mt-2">Jel ve akrilik sistemler ile kırılmayan, estetik ve doğal uzatılmış tırnaklar.</p>
-                        </div>
-                        <a href="https://wa.me/905362484214" target="_blank" class="mt-6 w-full py-2.5 bg-blush text-plum font-bold rounded-xl text-center text-sm hover:bg-plum hover:text-white transition">Randevu Al</a>
-                    </div>
-                    <div class="bg-white p-6 rounded-2xl shadow-card border border-plum/5 flex flex-col justify-between">
-                        <div>
-                            <div class="w-12 h-12 rounded-xl bg-green-50 text-wa flex items-center justify-center text-xl mb-4"><i class="fas fa-hand-sparkles"></i></div>
-                            <h3 class="font-serif font-bold text-xl">Kalıcı Oje & Manikür</h3>
-                            <p class="text-plum/65 text-sm mt-2"> Medikal manikür altyapısıyla 3-4 hafta boyunca parlaklığını koruyan kalıcı oje.</p>
-                        </div>
-                        <a href="https://wa.me/905362484214" target="_blank" class="mt-6 w-full py-2.5 bg-blush text-plum font-bold rounded-xl text-center text-sm hover:bg-plum hover:text-white transition">Randevu Al</a>
-                    </div>
-                </div>
-            </div>
-        </section>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+    <div class="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
+      <!-- Left -->
+      <div class="reveal-left active text-center lg:text-left">
+        <div class="inline-flex items-center gap-2 bg-white border border-gold/30 rounded-full pl-2 pr-4 py-1.5 shadow-card mb-6">
+          <span class="gold-bg text-white text-[11px] font-bold px-3 py-1 rounded-full flex items-center gap-1"><i class="fas fa-star text-[10px]"></i> 4.8</span>
+          <span class="text-[12px] md:text-[13px] font-semibold text-plum/70">Google'da 200+ değerlendirme • Üçyol'un en sevilen nail stüdyosu</span>
+        </div>
+        <h1 class="font-serif text-[38px] leading-[1.08] sm:text-[52px] md:text-[60px] font-bold text-plum">
+          İzmir Konak'ta Tırnaklarınıza <span class="italic gold-text">Sihirli</span> ve <span class="italic relative">Sanatsal
+            <svg class="absolute -bottom-2 left-0 w-full" height="12" viewBox="0 0 200 12" fill="none"><path d="M2 9C60 2 140 2 198 9" stroke="url(#g)" stroke-width="4" stroke-linecap="round"/><defs><linearGradient id="g" x1="0" x2="200"><stop stop-color="#D4AF37"/><stop offset="1" stop-color="#E0A96D"/></linearGradient></defs></svg>
+          </span> Bir Dokunuş
+        </h1>
+        <p class="mt-6 text-plum/65 text-[15px] md:text-[17px] leading-relaxed max-w-xl mx-auto lg:mx-0">
+          Konak Üçyol'da kişiye özel <strong class="text-plum">nail art tasarımları</strong>, protez tırnak, kalıcı oje ve medikal manikür ile tarzınızı ortaya çıkarın. Steril, trend ve premium bakım deneyimi sizi bekliyor.
+        </p>
 
-        <!-- Galeri -->
-        <section id="galeri" class="py-16 bg-white">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center max-w-xl mx-auto mb-12">
-                    <h2 class="font-serif text-3xl font-bold">Son Uygulamalarımız</h2>
-                </div>
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                    <div class="rounded-2xl overflow-hidden shadow h-64 img-zoom"><img src="https://raw.githubusercontent.com/thatsaren-creator/sihirliellernails/main/WhatsApp%20Image%202026-09-11%20at%2017.09.39%20(1).jpeg" class="w-full h-full object-cover"></div>
-                    <div class="rounded-2xl overflow-hidden shadow h-64 img-zoom"><img src="https://raw.githubusercontent.com/thatsaren-creator/sihirliellernails/main/37fe9118-1126-46b8-b7f2-94c09c5cdd09.jpg" class="w-full h-full object-cover"></div>
-                    <div class="rounded-2xl overflow-hidden shadow h-64 img-zoom"><img src="https://raw.githubusercontent.com/thatsaren-creator/sihirliellernails/main/c0351906-f0f9-46a5-a01f-1a82dd1eb074.jpg" class="w-full h-full object-cover"></div>
-                    <div class="rounded-2xl overflow-hidden shadow h-64 img-zoom"><img src="https://raw.githubusercontent.com/thatsaren-creator/sihirliellernails/main/c8cc3c64-3c47-445d-a245-3c52aa4c1bca.jpg" class="w-full h-full object-cover"></div>
-                </div>
-            </div>
-        </section>
+        <!-- 3 CTA -->
+        <div class="mt-8 flex flex-col sm:flex-row lg:flex-col xl:flex-row gap-3 justify-center lg:justify-start">
+          <a href="https://wa.me/905362484214?text=Merhaba,%20web%20sitenizden%20ula%C5%9F%C4%B1yorum.%20Nail%20art%20tasar%C4%B1mlar%C4%B1%20ve%20randevu%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum" target="_blank" class="btn-shine bg-wa hover:bg-wadark text-white px-6 py-4 rounded-2xl font-bold text-[15px] flex items-center justify-center gap-2.5 shadow-[0_15px_35px_-10px_rgba(31,168,85,.5)] hover:scale-[1.03] transition">
+            <span class="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center"><i class="fab fa-whatsapp text-lg"></i></span>
+            Hızlı WhatsApp Randevu
+          </a>
+          <a href="https://www.instagram.com/sihirliellernailart/" target="_blank" class="btn-shine insta-bg text-white px-6 py-4 rounded-2xl font-bold text-[15px] flex items-center justify-center gap-2.5 shadow-[0_15px_35px_-10px_rgba(238,42,123,.5)] hover:scale-[1.03] transition">
+            <span class="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center"><i class="fab fa-instagram text-lg"></i></span>
+            Instagram Profili
+          </a>
+          <a href="https://www.google.com/maps/search/?api=1&query=Kılıç+Reis+356.+Sk.+5A+Konak+İzmir" target="_blank" class="btn-shine bg-white border-2 border-plum/10 hover:border-gold text-plum px-6 py-4 rounded-2xl font-bold text-[15px] flex items-center justify-center gap-2.5 shadow-card hover:scale-[1.03] transition">
+            <span class="w-8 h-8 bg-blush rounded-full flex items-center justify-center text-plum"><i class="fas fa-location-arrow"></i></span>
+            Yol Tarifi Al
+          </a>
+        </div>
 
-        <!-- İletişim -->
-        <section id="iletisim" class="py-16 bg-plum text-white">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <h2 class="font-serif text-3xl md:text-4xl font-bold">Randevunuzu Şimdi Oluşturun</h2>
-                <p class="text-white/70 text-sm mt-3">İzmir Konak Kılıç Reis Mah. 356. Sk. 5A (Üçyol Metro Yakını)</p>
-                <div class="mt-8">
-                    <a href="https://wa.me/905362484214" target="_blank" class="inline-flex items-center gap-2 bg-wa hover:bg-wadark text-white font-bold px-8 py-4 rounded-2xl text-base transition shadow-lg">
-                        <i class="fab fa-whatsapp text-2xl"></i> WhatsApp İle İletişime Geç
-                    </a>
-                </div>
-            </div>
-        </section>
-    </main>
+        <!-- Social proof -->
+        <div class="mt-8 flex items-center justify-center lg:justify-start gap-4 flex-wrap">
+          <div class="flex -space-x-3">
+            <img src="https://i.pravatar.cc/80?img=47" class="w-10 h-10 rounded-full border-[3px] border-white shadow" alt="müşteri">
+            <img src="https://i.pravatar.cc/80?img=32" class="w-10 h-10 rounded-full border-[3px] border-white shadow" alt="müşteri">
+            <img src="https://i.pravatar.cc/80?img=44" class="w-10 h-10 rounded-full border-[3px] border-white shadow" alt="müşteri">
+            <img src="https://i.pravatar.cc/80?img=26" class="w-10 h-10 rounded-full border-[3px] border-white shadow" alt="müşteri">
+            <div class="w-10 h-10 rounded-full border-[3px] border-white bg-plum text-white text-[10px] font-bold flex items-center justify-center shadow">1.2k+</div>
+          </div>
+          <div class="text-left">
+            <div class="flex gap-0.5 text-gold text-sm"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            <p class="text-[13px] text-plum/60 font-medium"><strong class="text-plum">1.200+ mutlu müşteri</strong> bize güveniyor</p>
+          </div>
+          <button data-book class="hidden md:inline-flex items-center gap-2 text-[13px] font-bold text-plum underline decoration-gold decoration-2 underline-offset-4 hover:text-gold transition"><i class="fas fa-wand-magic-sparkles text-gold"></i> Akıllı randevu oluştur</button>
+        </div>
+      </div>
 
-    <footer class="bg-black text-white/50 py-6 text-center text-xs">
-        © 2026 Sihirliellernails Üçyol. Tüm hakları saklıdır.
-    </footer>
+      <!-- Right visual -->
+      <div class="reveal-right active relative flex justify-center lg:justify-end">
+        <div class="relative w-full max-w-[440px]">
+          <!-- main arch -->
+          <div class="arch overflow-hidden border-[6px] border-white shadow-soft relative img-zoom">
+            <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?q=80&w=800&auto=format&fit=crop" onerror="this.src='https://picsum.photos/seed/nailhero/700/900'" alt="Estetik nail art ve bakımlı eller" class="w-full h-[480px] md:h-[560px] object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-plum/50 via-transparent to-transparent"></div>
+            <div class="absolute bottom-5 left-5 right-5 glass rounded-2xl p-4 flex items-center gap-3">
+              <img src="https://images.unsplash.com/photo-1610992015732-2449b76344bc?q=80&w=200&auto=format&fit=crop" onerror="this.src='https://picsum.photos/seed/n2/200/200'" class="w-12 h-12 rounded-xl object-cover" alt="">
+              <div class="flex-1">
+                <div class="text-[13px] font-bold text-plum">Bugünün Tasarımı: Rose Aura</div>
+                <div class="text-[12px] text-plum/60">Jel + chrome + el çizimi • 90 dk</div>
+              </div>
+              <a href="https://www.instagram.com/sihirliellernailart/" target="_blank" class="w-10 h-10 insta-bg rounded-full text-white flex items-center justify-center hover:scale-110 transition"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+          <!-- floating cards -->
+          <div class="absolute -left-6 md:-left-14 top-16 glass border border-white rounded-2xl px-4 py-3 shadow-soft float-slow flex items-center gap-3">
+            <div class="w-11 h-11 rounded-xl bg-green-50 flex items-center justify-center text-wa text-xl"><i class="fas fa-shield-halved"></i></div>
+            <div><div class="text-[13px] font-extrabold">%100 Steril</div><div class="text-[11px] text-plum/60 font-medium">Tıbbi dezenfeksiyon</div></div>
+          </div>
+          <div class="absolute -right-3 md:-right-10 top-1/2 glass border border-white rounded-2xl px-4 py-3 shadow-soft float-delay flex items-center gap-3">
+            <div class="w-11 h-11 rounded-xl bg-blush flex items-center justify-center text-plum text-xl"><i class="fas fa-palette"></i></div>
+            <div><div class="text-[13px] font-extrabold">Özel Nail Art</div><div class="text-[11px] text-plum/60 font-medium">El çizimi tasarım</div></div>
+          </div>
+          <div class="absolute -left-4 md:-left-10 -bottom-4 bg-plum text-white rounded-2xl px-5 py-3.5 shadow-soft float-slower flex items-center gap-3">
+            <div class="text-2xl font-serif italic gold-text font-bold">4.8</div>
+            <div class="text-[11px] leading-tight text-white/70 font-medium">Google Puanı<br><span class="text-gold tracking-widest">★★★★★</span></div>
+          </div>
+          <!-- rotating badge -->
+          <div class="absolute -top-6 -right-2 md:-right-4 w-[110px] h-[110px]">
+            <div class="absolute inset-0 spin-slow">
+              <svg viewBox="0 0 100 100" class="w-full h-full"><defs><path id="circ" d="M50,50 m-36,0 a36,36 0 1,1 72,0 a36,36 0 1,1 -72,0"/></defs><text font-size="10.5" font-weight="800" letter-spacing="2.5" fill="#2D232E"><textPath href="#circ">SİHİRLİ ELLER • ÜÇYOL • İZMİR • </textPath></text></svg>
+            </div>
+            <div class="absolute inset-0 flex items-center justify-center"><div class="w-12 h-12 gold-bg rounded-full flex items-center justify-center text-white text-xl shadow-glow"><i class="fas fa-wand-magic-sparkles"></i></div></div>
+          </div>
+          <span class="absolute top-10 left-8 text-gold text-2xl twinkle">✦</span>
+          <span class="absolute bottom-24 right-8 text-rosegold text-xl twinkle" style="animation-delay:.7s">✦</span>
+        </div>
+      </div>
+    </div>
 
-    <script>
-        // Preloader Kapatma
-        window.addEventListener('load', () => {
-            setTimeout(() => {
-                const loader = document.getElementById('preloader');
-                if (loader) loader.classList.add('hide');
-            }, 300);
-        });
+    <!-- stats -->
+    <div class="mt-12 md:mt-16 grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 reveal">
+      <div class="bg-white rounded-2xl p-4 md:p-5 shadow-card border border-plum/5 flex items-center gap-3"><div class="w-11 h-11 rounded-xl gold-bg text-white flex items-center justify-center text-lg shrink-0"><i class="fas fa-heart"></i></div><div><div class="font-extrabold text-lg leading-none"><span class="counter" data-target="1200">0</span>+</div><div class="text-[12px] text-plum/55 font-medium">Mutlu Müşteri</div></div></div>
+      <div class="bg-white rounded-2xl p-4 md:p-5 shadow-card border border-plum/5 flex items-center gap-3"><div class="w-11 h-11 rounded-xl bg-plum text-gold flex items-center justify-center text-lg shrink-0"><i class="fas fa-brush"></i></div><div><div class="font-extrabold text-lg leading-none"><span class="counter" data-target="850">0</span>+</div><div class="text-[12px] text-plum/55 font-medium">Özel Tasarım</div></div></div>
+      <div class="bg-white rounded-2xl p-4 md:p-5 shadow-card border border-plum/5 flex items-center gap-3"><div class="w-11 h-11 rounded-xl bg-green-100 text-wa flex items-center justify-center text-lg shrink-0"><i class="fas fa-leaf"></i></div><div><div class="font-extrabold text-lg leading-none">%100</div><div class="text-[12px] text-plum/55 font-medium">Steril & Güvenli</div></div></div>
+      <div class="bg-white rounded-2xl p-4 md:p-5 shadow-card border border-plum/5 flex items-center gap-3"><div class="w-11 h-11 rounded-xl bg-blush text-plum flex items-center justify-center text-lg shrink-0"><i class="fas fa-crown"></i></div><div><div class="font-extrabold text-lg leading-none">5 Yıl</div><div class="text-[12px] text-plum/55 font-medium">Uzman Deneyim</div></div></div>
+    </div>
+  </div>
+</section>
 
-        // Mobil Menü Mantığı
-        const menuBtn = document.getElementById('menuBtn');
-        const mobileMenu = document.getElementById('mobileMenu');
-        if (menuBtn && mobileMenu) {
-            menuBtn.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
-        }
+<!-- MARQUEE -->
+<div class="bg-plum py-4 overflow-hidden -rotate-[0.6deg] scale-[1.02] shadow-soft relative z-10">
+  <div class="marquee-track gap-0 text-white font-serif italic text-lg md:text-xl whitespace-nowrap">
+    <div class="flex items-center gap-8 pr-8">
+      <span>Protez Tırnak</span><span class="text-gold">✦</span><span>Özel Nail Art</span><span class="text-gold">✦</span><span>Kalıcı Oje</span><span class="text-gold">✦</span><span>Medikal Manikür</span><span class="text-gold">✦</span><span>Jel Bakım</span><span class="text-gold">✦</span><span>El Çizimi</span><span class="text-gold">✦</span>
+    </div>
+    <div class="flex items-center gap-8 pr-8">
+      <span>Protez Tırnak</span><span class="text-gold">✦</span><span>Özel Nail Art</span><span class="text-gold">✦</span><span>Kalıcı Oje</span><span class="text-gold">✦</span><span>Medikal Manikür</span><span class="text-gold">✦</span><span>Jel Bakım</span><span class="text-gold">✦</span><span>El Çizimi</span><span class="text-gold">✦</span>
+    </div>
+  </div>
+</div>
 
-        // İlerleme Çubuğu
-        window.addEventListener('scroll', () => {
-            const winScroll = document.documentElement.scrollTop;
-            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            const scrolled = (winScroll / height) * 100;
-            const bar = document.getElementById('progressBar');
-            if (bar) bar.style.width = scrolled + '%';
-        });
-    </script>
-</body>
-</html>
+<!-- ============ HAKKIMIZDA ============ -->
+<section id="hakkimizda" class="py-16 md:py-24 relative scroll-mt-20">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <div class="reveal-left relative order-2 lg:order-1">
+        <div class="grid grid-cols-2 gap-4">
+          <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=600&auto=format&fit=crop" onerror="this.src='https://picsum.photos/seed/salon/600/700'" alt="Stüdyomuz" class="rounded-3xl h-[280px] md:h-[360px] w-full object-cover shadow-soft mt-8 img-zoom">
+          <div class="space-y-4">
+            <img src="https://images.unsplash.com/photo-1607779097040-26e80aa78e66?q=80&w=600&auto=format&fit=crop" onerror="this.src='https://picsum.photos/seed/nailx/600/400'" alt="Nail art detay" class="rounded-3xl h-[160px] md:h-[200px] w-full object-cover shadow-card">
+            <div class="gold-bg rounded-3xl p-5 text-white shadow-gold">
+              <div class="font-serif italic text-3xl font-bold">5+</div>
+              <div class="text-[13px] font-medium opacity-90">yıllık sanat & titizlik</div>
+              <div class="mt-3 flex gap-1 text-[13px]"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            </div>
+          </div>
+        </div>
+        <div class="absolute -bottom-4 left-1/2 -translate-x-1/2 md:left-8 md:translate-x-0 glass border border-white rounded-full px-5 py-2.5 shadow-soft flex items-center gap-2 text-[13px] font-bold whitespace-nowrap"><i class="fas fa-location-dot text-rosegold"></i> Üçyol Metro'ya 2 dk • Konak/İzmir</div>
+      </div>
+      <div class="reveal-right order-1 lg:order-2">
+        <div class="inline-flex items-center gap-2 text-[12px] font-extrabold tracking-[0.25em] text-gold mb-4"><span class="w-8 h-[2px] bg-gold rounded"></span> HAKKIMIZDA</div>
+        <h2 class="font-serif text-[32px] md:text-[46px] leading-tight font-bold">Titiz işçilik, <span class="italic gold-text">steril ortam</span> ve trendin ötesinde tasarımlar</h2>
+        <p class="mt-5 text-plum/65 leading-relaxed text-[15px] md:text-[16px]">Sihirliellernails Üçyol; hijyenden ödün vermeyen, her müşterisine özel tasarım sunan butik bir nail art stüdyosudur. İthal kaliteli ürünler, tek kullanımlık steril ekipmanlar ve en güncel tekniklerle tırnaklarınıza hem sağlık hem sanat katıyoruz.</p>
+        <p class="mt-3 text-plum/65 leading-relaxed text-[15px] md:text-[16px]">Randevulu ve sakin çalışma düzenimiz sayesinde size <strong class="text-plum">özel zaman ayırıyor</strong>, Pinterest'te gördüğünüz o modeli birebir — hatta daha iyisini — uyguluyoruz.</p>
+        <div class="mt-8 grid sm:grid-cols-2 gap-3">
+          <div class="bg-white rounded-2xl p-4 border border-plum/5 shadow-card card-hover flex gap-3"><div class="w-12 h-12 rounded-xl bg-blush flex items-center justify-center text-xl shrink-0">🎨</div><div><div class="font-bold text-[14px]">Sanatsal Nail Art Çizimleri</div><div class="text-[12.5px] text-plum/55 mt-1">El çizimi, 3D, chrome & taş süsleme</div></div></div>
+          <div class="bg-white rounded-2xl p-4 border border-plum/5 shadow-card card-hover flex gap-3"><div class="w-12 h-12 rounded-xl bg-green-50 flex items-center justify-center text-xl shrink-0 text-wa"><i class="fas fa-pump-medical"></i></div><div><div class="font-bold text-[14px]">%100 Steril Ekipmanlar</div><div class="text-[12.5px] text-plum/55 mt-1">Otklav + tek kullanımlık set</div></div></div>
+          <div class="bg-white rounded-2xl p-4 border border-plum/5 shadow-card card-hover flex gap-3"><div class="w-12 h-12 rounded-xl flex items-center justify-center text-xl shrink-0 gold-bg text-white"><i class="fas fa-star"></i></div><div><div class="font-bold text-[14px]">4.8 Müşteri Memnuniyeti</div><div class="text-[12.5px] text-plum/55 mt-1">Google'da 200+ gerçek yorum</div></div></div>
+          <div class="bg-white rounded-2xl p-4 border border-plum/5 shadow-card card-hover flex gap-3"><div class="w-12 h-12 rounded-xl bg-plum text-gold flex items-center justify-center text-xl shrink-0"><i class="fas fa-gem"></i></div><div><div class="font-bold text-[14px]">Kaliteli İthal Malzemeler</div><div class="text-[12.5px] text-plum/55 mt-1">Uzun ömürlü, tırnak dostu ürün</div></div></div>
+        </div>
+        <div class="mt-7 flex flex-wrap gap-3">
+          <button data-book class="bg-plum text-white px-6 py-3.5 rounded-full font-bold text-sm hover:bg-black transition btn-shine flex items-center gap-2"><i class="fas fa-calendar-check text-gold"></i> Ücretsiz Ön Görüşme Al</button>
+          <a href="#hizmetler" class="bg-white border border-plum/10 px-6 py-3.5 rounded-full font-bold text-sm hover:border-gold transition flex items-center gap-2">Hizmetleri İncele <i class="fas fa-arrow-down text-gold"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HİZMETLER ============ -->
+<section id="hizmetler" class="py-16 md:py-24 bg-gradient-to-b from-white via-blush/50 to-cream relative overflow-hidden scroll-mt-20">
+  <div class="blob w-[400px] h-[400px] bg-lilac rounded-full -right-32 top-20 opacity-50"></div>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+    <div class="text-center max-w-2xl mx-auto reveal">
+      <div class="inline-flex items-center gap-2 text-[12px] font-extrabold tracking-[0.25em] text-gold mb-4 justify-center"><sp
